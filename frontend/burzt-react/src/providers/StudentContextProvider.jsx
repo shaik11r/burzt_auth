@@ -20,7 +20,7 @@ const StudentContextProvider = ({ children }) => {
   const navigate = useNavigate();
 
   const signUp = async (username, password) => {
-    const response = await fetch("http://localhost:8000/students/signup", {
+    const response = await fetch("https://burztbackend.onrender.com/students/signup", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -39,7 +39,7 @@ const StudentContextProvider = ({ children }) => {
     }
   };
   const signIn = async (username, password) => {
-    const response = await fetch("http://localhost:8000/students/signin", {
+    const response = await fetch("https://burztbackend.onrender.com/students/signin", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -62,7 +62,7 @@ const StudentContextProvider = ({ children }) => {
   };
 
   const getCurrentUser = async () => {
-    const response = await fetch("http://localhost:8000/students/user", {
+    const response = await fetch("https://burztbackend.onrender.com/students/user", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -75,7 +75,7 @@ const StudentContextProvider = ({ children }) => {
   };
 
   const getOtherStudents = async () => {
-    const response = await fetch("http://localhost:8000/students/others", {
+    const response = await fetch("https://burztbackend.onrender.com/students/others", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
